@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;}
+/* Debut de l'entete avec logo et titre*/
+body{
+    background-color: white;
+    
+}
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#402B1B;
+    margin-bottom: 20px;
+    color: #F4DEA7;
+    
+}
+.main-header img {
+    width:20px; /* Ajustez la taille du logo selon vos besoins */
+    margin:10px; /* Espacement entre le logo et le titre */
+    
+}
+
+.main-title {
+    font-size: 30px; /* Ajustez la taille du titre selon vos besoins */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Fin de l'entete avec logo et titre */
+
+/* Debut de la partie centre*/
+
+.items-container{
+    background-color: #FFDDC2;
+    border-radius: 5px;
+    grid-column: 1/ 2; /* Occupe la première colonne */
+    height: 100%;
+ 
+}
+
+.name-container{
+    background-color: #FFDDC2;
+    border-radius: 5px;
+    width: 100%; /* Définir une largeur de 300 pixels */
+    height: 40%; /* Définir une hauteur de 200 pixels */
+}
+    
+.payment-container{
+    background-color: #FFDDC2;
+    border-radius: 5px;
+    width: 100%; /* Définir une largeur de 300 pixels */
+    height: 55%; 
+}
+.main-space {
+    display: grid;
+    grid-template-columns: 1fr 1fr ; /* Deux colonnes de largeur égale */
+    gap: 20px; /* Espacement entre les colonnes */
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+
+}
+.name-container,
+.payment-container {
+    grid-column: 2 / 3; /* Occupe la deuxième colonne */
+    display: grid;
+    grid-auto-rows: auto; /* Ajuste automatiquement la hauteur des lignes */
+    gap: 10px; /* Espacement entre les éléments */
+    align-content: flex-start; /* Aligner les éléments en haut */
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+  .payment-card-label
+  {
+      position: absolute;
+      color: #8F693D;
+      font-size: 11px;
+      left: 50px;
+      top:57%; /* Ajustez la position verticale */
+      transform: translateY(-50%); /* Centrez verticalement */
+      padding: 0 2px;
+      background-color: #FFDDC2;
+    }
+  .ccv-number-label
+  {
+      position: absolute;
+      color: #8F693D;
+      font-size: 11px;
+      left: 50px;
+      top:32%; /* Ajustez la position verticale */
+      transform: translateY(-50%); /* Centrez verticalement */
+      padding: 0 2px;
+      background-color: #FFDDC2;
+    }
+  
+    .input-label {
+      position: absolute;
+      color:#8F693D;
+      font-size: 11px;
+      left: 50px;
+      top:45%; /* Ajustez la position verticale */
+      transform: translateY(-50%); /* Centrez verticalement */
+      padding: 0 2px;
+      background-color: #FFDDC2;
+    }
+.items-title,
+.name-title,
+.payment-title {
+    text-align:left; /* Centrer le texte */
+    margin-bottom: 20px; /* Ajouter un espacement en bas */
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 35px;
+    color:#8F693D;
+    font-weight: normal;
+    
+
+}
+.chiffre,
+.cappucino,
+.cappucino-1,
+.croissant {
+    font-weight: bold; /* Met en gras le chiffre et le nom du produit */
+    width: 20%;
+}
+
+.six-euros,
+.seven-nine,
+.cinq-euros {
+    text-align: right; /* Aligne les prix à droite */
+    width: 10%;
+    margin-left: 80%;
+}
+
+.light-foam,
+.almond-milk,
+.double-shot,
+.butter {
+    font-size: 14px; /* Taille de police plus petite pour la description */
+    color: #ED8F5B; /* Couleur grise pour la description */
+    width: 100%;
+    display: block;  
+    margin-left: 21%;
+    margin-top:0px;
+    
+}
+
+ul {
+    list-style: none; /* Supprimer les puces de liste */
+   
+}
+
+li {
+    margin-bottom: 20px; /* Ajouter un espacement entre les éléments de la liste */
+    border-bottom: 1px solid #ED8F5B;
+    padding: 20px 0;
+    margin-right: 20px;
+}
+li > * {
+    display: inline-block;
+    vertical-align: top;
+}
+@media (max-width: 768px) {
+    li > * {
+        display: block;
+        width: auto;
+    }
+}
+input.name-order,
+input.card-number  {
+    width:90%; /* Occuper toute la largeur disponible */
+    margin-left: 30px;
+    border-radius: 30px;
+    border: 2px solid #6e4b30;
+    background-color: transparent;
+    padding:  10px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    
+    
+}
+input.ccv-number {
+        width: 35%; /* Largeur réduite pour l'input ccv-number */
+        margin-left: 30px;
+        border-radius: 30px;
+        border: 2px solid #6e4b30;
+        background-color: transparent;
+        padding:  10px;
+        margin-bottom: 20px;
+        font-size: 10px;
+        
+    }
+
+li:last-child {
+    border-bottom: none; /* Supprime le trait du dernier élément */
+}
+/* Fin de la partie centre*/    
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alignement des éléments au centre horizontalement */
+    text-align: center; /* Alignement du texte à gauche */
+    margin-top: 70px;
+}
+
+.footer table {
+    width: 50%;
+}
+
+.footer td.Subtotal,
+.footer td.tax,
+.footer td.total {
+     text-align: left; /* Alignement du texte des classes à gauche */
+     font-size: 20px;
+     padding-bottom: 15px;
+     
+}
+.total-section{
+
+    font-weight: bold;
+}
+.footer button {
+    margin-top: 20px; /* Espacement entre le tableau et le bouton */
+}
+
+button{
+    background-color:#D19665 ;
+    border-radius: 20px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    margin-top: 10px;
+}
+.footer-container {
+    margin-bottom: 10px; /* Ajouter de l'espace en bas du tableau */
+  }
+  
+
+  
